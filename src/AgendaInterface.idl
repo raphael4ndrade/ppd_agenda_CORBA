@@ -1,0 +1,15 @@
+module AgendaCORBA{
+
+	typedef sequence<string> listContacts;
+
+	interface AgendaInterface{
+		listContacts getListContacts();
+		void setListContacts(in listContacts list);
+		
+		string isAlive();
+		void insert(in string name, in long number);
+		void remove(in long index);
+		long search(in string name);
+		void update(in long index, in string name, in long number);
+	};
+};
